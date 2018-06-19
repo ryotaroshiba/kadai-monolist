@@ -1,6 +1,11 @@
- use \App\Item;
+<?php
 
-  class ItemsController extends Controller
+namespace App\Http\Controllers;
+
+
+use \App\Item;
+
+class ItemsController extends Controller
   {
 
     public function create()
@@ -16,6 +21,7 @@
                 'imageFlag' => 1,
                 'hits' => 20,
             ]);
+
 
             // Creating "Item" instance to make it easy to handle.（not saving）
             foreach ($rws_response->getData()['Items'] as $rws_item) {
